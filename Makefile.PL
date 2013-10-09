@@ -12,11 +12,7 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "Easy to generate feed rss or atom for Dancer2 applications.",
   "AUTHOR" => "Natal Ng\303\251tal",
   "BUILD_REQUIRES" => {
-    "Dancer2::Test" => 0,
-    "Module::Build" => "0.3601",
-    "Test::More" => 0,
-    "strict" => 0,
-    "warnings" => 0
+    "Module::Build" => "0.3601"
   },
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30",
@@ -32,12 +28,32 @@ my %WriteMakefileArgs = (
     "Dancer2::Plugin" => 0,
     "XML::Feed" => 0
   },
-  "VERSION" => "1.131470",
+  "TEST_REQUIRES" => {
+    "Dancer2::Test" => 0,
+    "Test::More" => 0,
+    "lib" => 0,
+    "strict" => 0,
+    "warnings" => 0
+  },
+  "VERSION" => "1.132820",
   "test" => {
     "TESTS" => "t/*.t"
   }
 );
 
+
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.63_03) } ) {
+  my $tr = delete $WriteMakefileArgs{TEST_REQUIRES};
+  my $br = $WriteMakefileArgs{BUILD_REQUIRES};
+  for my $mod ( keys %$tr ) {
+    if ( exists $br->{$mod} ) {
+      $br->{$mod} = $tr->{$mod} if $tr->{$mod} > $br->{$mod};
+    }
+    else {
+      $br->{$mod} = $tr->{$mod};
+    }
+  }
+}
 
 unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
   my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
