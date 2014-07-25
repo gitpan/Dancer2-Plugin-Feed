@@ -1,5 +1,10 @@
-Revision history for Dancer-Plugin-Feed 
+Revision history for Dancer-Plugin-Feed
+
+1.142060  2014-07-25 09:39:46CEST+0200 Europe/Paris
+
+    * Use Plack::Test for all test thanks to sawyer (#2).
 
 1.132820  2013-10-09 13:33:30 Europe/Paris
 
     * Initial version developed.
+

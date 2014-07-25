@@ -3,8 +3,9 @@ abstract: 'Easy to generate feed rss or atom for Dancer2 applications.'
 author:
   - 'Natal Ngétal'
 build_requires:
-  Dancer2::Test: 0
+  HTTP::Request::Common: 0
   Module::Build: 0.3601
+  Plack::Test: 0
   Test::More: 0
   lib: 0
   strict: 0
@@ -13,7 +14,7 @@ configure_requires:
   ExtUtils::MakeMaker: 6.30
   Module::Build: 0.3601
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300039, CPAN::Meta::Converter version 2.132620'
+generated_by: 'Dist::Zilla version 5.009, CPAN::Meta::Converter version 2.132620'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -24,4 +25,4 @@ requires:
   Dancer2: 0
   Dancer2::Plugin: 0
   XML::Feed: 0
-version: 1.132820
+version: 1.142060

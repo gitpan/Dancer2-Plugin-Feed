@@ -1,14 +1,14 @@
 #
 # This file is part of Dancer2-Plugin-Feed
 #
-# This software is copyright (c) 2013 by Natal Ngétal.
+# This software is copyright (c) 2014 by Natal Ngétal.
 #
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
 #
 package Dancer2::Plugin::Feed;
 {
-  $Dancer2::Plugin::Feed::VERSION = '1.132820';
+  $Dancer2::Plugin::Feed::VERSION = '1.142060';
 }
 
 use Dancer2;
@@ -128,7 +128,7 @@ Dancer2::Plugin::Feed - Easy to generate feed rss or atom for Dancer2 applicatio
 
 =head1 VERSION
 
-version 1.132820
+version 1.142060
 
 =head1 SYNOPSIS
 
@@ -260,7 +260,7 @@ Natal Ngétal
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Natal Ngétal.
+This software is copyright (c) 2014 by Natal Ngétal.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
